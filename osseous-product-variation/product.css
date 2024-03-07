@@ -8,7 +8,7 @@
   width: 300px; /* Adjust as needed */
   height: 300px; /* Adjust as needed */
   display: grid;
-  grid-template-rows: 1fr 1fr; /* Two rows */
+  grid-template-rows: 1fr 1fr 1fr; /* Three rows */
 }
 
 .main-image {
@@ -16,18 +16,20 @@
   height: 100%;
 }
 
-.top-image {
+.top-image { /* Corrected selector */
   width: 100%;
   height: 50%;
   position: absolute;
-  top: 0;
+  top: -50%;
   left: 0;
+  z-index: 2; /* Ensure top image is above main image */
 }
 
 .lower-image {
   width: 100%;
   height: 50%;
   position: absolute;
+  top: 50%;
   bottom: 0;
   left: 0;
 }
